@@ -1,3 +1,5 @@
+import { browser } from 'Protractor';
+
 describe('App', () => {
 
   beforeEach(() => {
