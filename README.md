@@ -49,8 +49,11 @@
     For Development: npm run build:dev
     For Production: npm run build:prod 
 8. Run the app:
-    1) One way
-    set ASPNETCORE_ENVIRONMENT=Development
+    1) One way - 
+        Windows:
+            `set ASPNETCORE_ENVIRONMENT=Development`
+        OSX:
+            `export ASPNETCORE_ENVIRONMENT=Development`
     `dotnet run` (for single run) OR `dotnet watch run` (in watch mode)
     2) Another way:
     Just F5 key if you are using VS code editor or Visual Studio IDE
