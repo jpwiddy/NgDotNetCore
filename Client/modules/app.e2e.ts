@@ -1,3 +1,5 @@
+import { browser } from 'Protractor';
+
 describe('App', () => {
 
   beforeEach(() => {
@@ -7,7 +9,7 @@ describe('App', () => {
 
   it('should have a title', () => {
     let subject = browser.getTitle();
-    let result  = 'AspNetCoreSpa';
+    let result  = 'Site title';
     expect(subject).toEqual(result);
   });
 
