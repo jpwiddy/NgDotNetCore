@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { PageHeadingComponent } from './directives/page-heading.directive';
 import { DynamicFormComponent } from './forms/dynamic-form.component';
@@ -14,6 +13,7 @@ import { FormControlService } from './forms/form-control.service';
 
 import { HeaderComponent } from './layout/header.component';
 import { FooterComponent } from './layout/footer.component';
+
 // Services
 import { DataService } from './services/data.service';
 import { ApiGatewayService } from './services/api-gateway.service';
@@ -29,7 +29,6 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    NgbModule.forRoot(),
     // No need to export as these modules don't expose any components/directive etc'
     HttpModule,
     JsonpModule,
@@ -50,7 +49,6 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    NgbModule,
     // Providers, Components, directive, pipes
     DynamicFormComponent,
     DynamicFormControlComponent,

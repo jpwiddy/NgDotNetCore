@@ -4,6 +4,8 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/Router';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { routing }        from './app.routes';
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
@@ -18,6 +20,7 @@ import { HomeModule }  from './home/home.module';
         // FormsModule,
         HttpModule,
         // Only module that app module loads
+        NgbModule.forRoot(),
         SharedModule.forRoot(),
         HomeModule
     ],
