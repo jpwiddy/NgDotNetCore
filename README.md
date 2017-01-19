@@ -6,7 +6,6 @@
 * [Webpack 2](https://webpack.github.io/)
 * [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
 * [ng-bootstrap](https://ng-bootstrap.github.io/)
-* [ng2-translate](https://github.com/ocombe/ng2-translate)
 * [Typescript 2](http://www.typescriptlang.org/)
 * [SASS](http://sass-lang.com/) support
 * [Best practices](https://angular.io/docs/ts/latest/guide/style-guide.html) in file and application organization for Angular 2.
@@ -22,7 +21,7 @@
 * Login and Registration functionality using [Asp.Net Identity](https://docs.asp.net/en/latest/security/authentication/identity.html)
 * Extensible User/Role identity implementation
 * Various social login support, Follow [this](https://github.com/asadsahi/AspNetCoreSpa/wiki/Social-Login-Setup) wiki page to see how it will work.
-* Lazy loading of all routes, child routes (About page example) with basic animation example (On about page).
+* Lazy loading of all routes, child routes
 * [Angular 2 dynamic forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html) for reusability and to keep html code DRY.
 * [Serilog](https://serilog.net/) with [Seq](https://getseq.net/) support to manage structured logging.
 * [Swagger](http://swagger.io/) as Api explorer (Visit url **http://localhost:5000/swagger/ui** after running the application)

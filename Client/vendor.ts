@@ -14,7 +14,6 @@ import '@angular/router';
 
 // import 3rd party libs
 import 'bootstrap';
-import 'ng2-translate';
 import '@ng-bootstrap/ng-bootstrap';
 
 // RxJS

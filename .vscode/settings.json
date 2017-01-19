@@ -19,6 +19,7 @@
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true,
+        "**/wwwroot/dist": true,
         "**/coverage": true
     },
     "typescript.tsdk": "./node_modules/typescript/lib"
