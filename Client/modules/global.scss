@@ -1,0 +1,4 @@
+@import './_variables.scss';
+
+.btn:focus { outline: none; box-shadow: none;}
+.btn:hover { outline: 0 !important; box-shadow: none;}

@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule, JsonpModule } from '@angular/http';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { PageHeadingComponent } from './directives/page-heading.directive';
 import { DynamicFormComponent } from './forms/dynamic-form.component';
 import { DynamicFormControlComponent } from './forms/dynamic-form-control.component';
@@ -24,57 +26,59 @@ import { UtilityService } from './services/utility.service';
 import { UppercasePipe } from './pipes/uppercase.pipe';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    // No need to export as these modules don't expose any components/directive etc'
-    HttpModule,
-    JsonpModule,
-  ],
-  declarations: [
-    DynamicFormComponent,
-    DynamicFormControlComponent,
-    ErrorMessageComponent,
-    ErrorSummaryComponent,
-    FooterComponent,
-    HeaderComponent,
-    PageHeadingComponent,
-    UppercasePipe
-  ],
-  exports: [
-    // Modules
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    // Providers, Components, directive, pipes
-    DynamicFormComponent,
-    DynamicFormControlComponent,
-    ErrorSummaryComponent,
-    ErrorMessageComponent,
-    FooterComponent,
-    HeaderComponent,
-    PageHeadingComponent,
-    UppercasePipe
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
+        // No need to export as these modules don't expose any components/directive etc'
+        NgbModule.forRoot(),
+        HttpModule,
+        JsonpModule,
+    ],
+    declarations: [
+        DynamicFormComponent,
+        DynamicFormControlComponent,
+        ErrorMessageComponent,
+        ErrorSummaryComponent,
+        FooterComponent,
+        HeaderComponent,
+        PageHeadingComponent,
+        UppercasePipe
+    ],
+    exports: [
+        // Modules
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
+        NgbModule,
+        // Providers, Components, directive, pipes
+        DynamicFormComponent,
+        DynamicFormControlComponent,
+        ErrorSummaryComponent,
+        ErrorMessageComponent,
+        FooterComponent,
+        HeaderComponent,
+        PageHeadingComponent,
+        UppercasePipe
+    ]
 
 })
 export class SharedModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: SharedModule,
-      providers: [
-        // Providers
-        HttpErrorHandlerService,
-        ApiGatewayService,
-        AuthService,
-        DataService,
-        ContentService,
-        FormControlService,
-        UtilityService
-      ]
-    };
-  }
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: SharedModule,
+            providers: [
+                // Providers
+                HttpErrorHandlerService,
+                ApiGatewayService,
+                AuthService,
+                DataService,
+                ContentService,
+                FormControlService,
+                UtilityService
+            ]
+        };
+    }
 }

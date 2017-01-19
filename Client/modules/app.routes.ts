@@ -18,8 +18,8 @@ const routes: Routes = [
     path: 'admin', loadChildren: './admin/admin.module#AdminModule'
   },
   // Catch all
-  { 
-    path: '**', redirectTo: '' 
+  {
+    path: '**', redirectTo: ''
   },
 ];
 
