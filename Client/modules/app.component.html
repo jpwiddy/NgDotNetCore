@@ -1,7 +1,9 @@
 <app-header></app-header>
-<icon-bar></icon-bar>
-<div class="container app-content">
-    <!-- component routing placeholder -->
-    <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
+<icon-bar *ngIf="true"></icon-bar>
+<main [class.ml-icon-bar]="true">
+    <div class="container app-content">
+        <!-- component routing placeholder -->
+        <router-outlet></router-outlet>
+    </div>
+</main>
+<!--<app-footer></app-footer>-->
