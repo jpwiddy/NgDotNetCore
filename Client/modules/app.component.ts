@@ -9,12 +9,16 @@ import { DataService } from './shared/services/data.service';
  */
 @Component({
     selector: 'app-component',
-    styleUrls: ['./app.component.scss'],
-    templateUrl: './app.component.html'
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: [
+        './app.component.scss',
+        '../stylesheets/app.global.scss'
+    ],
+    templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
 
-    constructor(private titleService: Title) {}
+    constructor(private titleService: Title) { }
 
     ngOnInit() {
         this.setTitle('Site title');

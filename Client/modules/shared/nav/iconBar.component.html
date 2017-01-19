@@ -1,5 +1,5 @@
 <div class="icon-menu">
     <ul>
-        <li *ngFor="let item of sideBar" [class]="item.icon" [ngbTooltip]="item.label" placement="right"></li>
+        <li *ngFor="let item of sideBar" [routerLink]='item.routerRoute' [class]="item.icon" [ngbTooltip]="item.label" placement="right"></li>
     </ul>
 </div>
