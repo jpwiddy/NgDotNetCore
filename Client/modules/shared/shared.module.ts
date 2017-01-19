@@ -11,8 +11,8 @@ import { ErrorMessageComponent } from './forms/error-message.component';
 import { ErrorSummaryComponent } from './forms/error-summary.component';
 import { FormControlService } from './forms/form-control.service';
 
-import { HeaderComponent } from './layout/header.component';
-import { FooterComponent } from './layout/footer.component';
+import { HeaderComponent } from './nav/header.component';
+import { FooterComponent } from './nav/footer.component';
 
 // Services
 import { DataService } from './services/data.service';

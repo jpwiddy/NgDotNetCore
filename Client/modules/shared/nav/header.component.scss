@@ -1,0 +1,28 @@
+@import '../../_variables.scss';
+
+.navbar-ifs {
+    background-color: $ifs-purple;
+
+    .nav-menu-btn {
+        margin-right: 1em;
+    }
+	.navbar-brand {
+		cursor: pointer;
+		color: #ffffff !important;
+		img { transition: all .2s ease-in-out; }
+		img:hover { transform: scale(1.1); }
+	}
+	.btn-link {
+		outline: 0;
+		border: none;
+		color: #ffffff;
+		text-decoration: none;
+	}
+	.dropdown-menu {
+		border-radius: 0;
+		margin-top: 11px;
+	}
+    #dropdown-topbar-user {
+        cursor: pointer;
+    }
+}
