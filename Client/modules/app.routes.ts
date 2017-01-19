@@ -1,8 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   // Lazy async modules
+  {
+    path: '', loadChildren: './home/home.module#HomeModule'
+  },
   {
     path: 'login', loadChildren: './login/login.module#LoginModule'
   },
@@ -14,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: 'admin', loadChildren: './admin/admin.module#AdminModule'
-  }
+  },
+  { path: '**', redirectTo: '' },
 ];
 
 export const routing = RouterModule.forRoot(routes);

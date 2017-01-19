@@ -5,7 +5,7 @@ import { ControlBase } from './control-base';
 import { ValidationService } from './validation.service';
 
 @Component({
-    selector: 'appc-control-error-message',
+    selector: 'error-message',
     template: `<div *ngIf="errorMessage" class="form-control-feedback"> {{errorMessage}} </div>`
 })
 export class ErrorMessageComponent {

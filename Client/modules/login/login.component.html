@@ -5,8 +5,8 @@
         </div>
 
         <div class="card-block">
-            <appc-error-summary [errors]="errors"></appc-error-summary>
-            <appc-dynamic-form (formsubmit)="login($event)" [controls]="controls" [btnText]="'Login'"></appc-dynamic-form>
+            <error-summary [errors]="errors"></error-summary>
+            <dynamic-form (formsubmit)="login($event)" [controls]="controls" [btnText]="'Login'"></dynamic-form>
         </div>
 
     </div>

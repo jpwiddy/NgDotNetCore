@@ -5,7 +5,7 @@ import { ControlBase } from './control-base';
 import { FormControlService } from './form-control.service';
 
 @Component({
-    selector: 'appc-dynamic-form',
+    selector: 'dynamic-form',
     templateUrl: './dynamic-form.component.html'
 })
 export class DynamicFormComponent implements OnInit {
