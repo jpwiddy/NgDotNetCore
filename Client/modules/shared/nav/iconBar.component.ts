@@ -7,22 +7,23 @@ import { Component } from '@angular/core';
 })
 export class IconBarComponent {
     sideBar = [
-        { label: 'Airplane', icon: 'ion-paper-airplane' },
-        { label: 'Checklist', icon: 'ion-checkmark-circled' },
-        { label: 'Stats', icon: 'ion-stats-bars' },
-        { label: 'Settings', icon: 'ion-settings' },
-        { label: 'Funnel', icon: 'ion-funnel' },
-        { label: 'Hammer', icon: 'ion-hammer' },
-        { label: 'Heart', icon: 'ion-heart' },
-        { label: 'Calculator', icon: 'ion-calculator' },
-        { label: 'Merge', icon: 'ion-merge' },
-        { label: 'Scheduler', icon: 'ion-calendar' },
-        { label: 'Security', icon: 'ion-key' },
-        { label: 'CSR', icon: 'ion-happy' },
-        { label: 'Privacy', icon: 'ion-eye' },
-        { label: 'Announcements', icon: 'ion-speakerphone' },
-        { label: 'Ca$h', icon: 'ion-cash' },
-        { label: 'Awards', icon: 'ion-ribbon-b' }
+        { label: 'Airplane', icon: 'fa fa-paper-plane' },
+        { label: 'Checklist', icon: 'fa fa-check-square' },
+        { label: 'Tags', icon: 'fa fa-tags' },
+        { label: 'Settings', icon: 'fa fa-cog' },
+        { label: 'Database', icon: 'fa fa-database' },
+        { label: 'FAQ', icon: 'fa fa-question-circle' },
+        { label: 'Filter', icon: 'fa fa-filter' },
+        { label: 'Heart', icon: 'fa fa-heart' },
+        { label: 'Calculator', icon: 'fa fa-calculator' },
+        { label: 'Ideas', icon: 'fa fa-lightbulb-o' },
+        { label: 'Docs', icon: 'fa fa-folder-o' },
+        { label: 'Scheduler', icon: 'fa fa-calendar' },
+        { label: 'Security', icon: 'fa fa-key' },
+        { label: 'UI', icon: 'fa fa-object-ungroup' },
+        { label: 'Privacy', icon: 'fa fa-eye' },
+        { label: 'Stats', icon: 'fa fa-area-chart' },
+        { label: 'Ca$h', icon: 'fa fa-dollar' }
     ];
 
     constructor() { }

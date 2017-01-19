@@ -22,10 +22,10 @@
 
         // Had to use pixels because icons require pixel sizing
 		li {
-			font-size: 30px;
+			font-size: 1.75em;
 			height: 56px;
 			width: 100%;
-            padding-top: 6px;
+			line-height: 56px;
 			text-align: center;
 			color: #ffffff;
             cursor: pointer;
