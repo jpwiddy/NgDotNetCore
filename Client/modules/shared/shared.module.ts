@@ -15,6 +15,7 @@ import { FormControlService } from './forms/form-control.service';
 
 import { HeaderComponent } from './nav/header.component';
 import { FooterComponent } from './nav/footer.component';
+import { IconBarComponent } from './nav/iconBar.component';
 
 // Services
 import { DataService } from './services/data.service';
@@ -42,6 +43,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         ErrorMessageComponent,
         ErrorSummaryComponent,
         FooterComponent,
+        IconBarComponent,
         HeaderComponent,
         PageHeadingComponent,
         UppercasePipe
@@ -60,6 +62,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         ErrorMessageComponent,
         FooterComponent,
         HeaderComponent,
+        IconBarComponent,
         PageHeadingComponent,
         UppercasePipe
     ]

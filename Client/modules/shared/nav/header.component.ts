@@ -10,6 +10,9 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderComponent {
     isCollapsed: boolean = true;
+    sideNavOpen: boolean = false;
+    openClass: string = 'st-menu-open';
+
     constructor(private router: Router, private authService: AuthService) { }
 
     toggleNav() {
