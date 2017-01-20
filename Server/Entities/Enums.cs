@@ -1,4 +1,4 @@
-namespace AspNetCoreSpa.Server.Entities
+namespace NgDotNetCore.Server.Entities
 {
     public enum ExternalLoginStatus
     {

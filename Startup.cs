@@ -16,16 +16,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using AspNetCoreSpa.Server;
-using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Filters;
-using AspNetCoreSpa.Server.Repositories;
-using AspNetCoreSpa.Server.Repositories.Abstract;
-using AspNetCoreSpa.Server.Services;
-using AspNetCoreSpa.Server.Services.Abstract;
+using NgDotNetCore.Server;
+using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Filters;
+using NgDotNetCore.Server.Repositories;
+using NgDotNetCore.Server.Repositories.Abstract;
+using NgDotNetCore.Server.Services;
+using NgDotNetCore.Server.Services.Abstract;
 using Serilog;
 
-namespace AspNetCoreSpa
+namespace NgDotNetCore
 {
     public class Startup
     {

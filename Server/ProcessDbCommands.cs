@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNetCoreSpa.Server
+namespace NgDotNetCore.Server
 {
     public class ProcessDbCommands
     {

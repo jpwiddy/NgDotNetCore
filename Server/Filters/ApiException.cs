@@ -1,6 +1,6 @@
 using System;
 
-namespace AspNetCoreSpa.Server.Filters
+namespace NgDotNetCore.Server.Filters
 {
 
     public class ApiException : Exception

@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\AspNetCoreSpa.dll",
+            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\NgDotNetCore.dll",
             // "args": ["dropdb", "seeddb"],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,

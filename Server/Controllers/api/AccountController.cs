@@ -1,17 +1,17 @@
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Extensions;
-using AspNetCoreSpa.Server.Services.Abstract;
-using AspNetCoreSpa.Server.ViewModels.AccountViewModels;
+using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Extensions;
+using NgDotNetCore.Server.Services.Abstract;
+using NgDotNetCore.Server.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 
-namespace AspNetCoreSpa.Server.Controllers.api
+namespace NgDotNetCore.Server.Controllers.api
 {
     [Authorize]
     [Route("api/[controller]")]

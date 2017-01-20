@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace AspNetCoreSpa.Server.ViewModels.ManageViewModels
+namespace NgDotNetCore.Server.ViewModels.ManageViewModels
 {
     public class ChangePasswordViewModel
     {

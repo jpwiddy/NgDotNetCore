@@ -1,8 +1,8 @@
-using AspNetCoreSpa.Server.Filters;
+using NgDotNetCore.Server.Filters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreSpa.Server.Controllers.api
+namespace NgDotNetCore.Server.Controllers.api
 {
     [Authorize]
     [ServiceFilter(typeof(ApiExceptionFilter))]

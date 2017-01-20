@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using AspNetCoreSpa.Server.Entities;
+using NgDotNetCore.Server.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreSpa.Server.Controllers.api
+namespace NgDotNetCore.Server.Controllers.api
 {
     public class AppUtils
     {

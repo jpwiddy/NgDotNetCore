@@ -1,8 +1,8 @@
-﻿using AspNetCoreSpa.Server.Entities;
+﻿using NgDotNetCore.Server.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace AspNetCoreSpa.Server
+namespace NgDotNetCore.Server
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int>
     {

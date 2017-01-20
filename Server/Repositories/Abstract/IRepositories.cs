@@ -1,6 +1,6 @@
-﻿using AspNetCoreSpa.Server.Entities;
+﻿using NgDotNetCore.Server.Entities;
 
-namespace AspNetCoreSpa.Server.Repositories.Abstract
+namespace NgDotNetCore.Server.Repositories.Abstract
 {
 
     public interface ILoggingRepository : IEntityBaseRepository<Error> { }

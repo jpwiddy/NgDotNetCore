@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using AspNetCoreSpa.Server.Entities;
+using NgDotNetCore.Server.Entities;
 
-namespace AspNetCoreSpa.Server.Repositories.Abstract
+namespace NgDotNetCore.Server.Repositories.Abstract
 {
     public interface IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {

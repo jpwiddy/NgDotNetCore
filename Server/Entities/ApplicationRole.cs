@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-namespace AspNetCoreSpa.Server.Entities
+namespace NgDotNetCore.Server.Entities
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationRole : IdentityRole<int>
