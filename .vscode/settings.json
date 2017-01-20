@@ -12,7 +12,7 @@
         ".vs": true,
         "project.lock.json": true,
         "AspNetCoreSpa.xproj": false,
-        "AspNetCoreSpa.sln": false,
+        "AspNetCoreSpa.sln": true,
         "Properties": false,
         ".awcache": true
     },

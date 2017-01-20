@@ -5,27 +5,26 @@ import { RouterModule } from '@angular/router';
 import { DataService } from './shared/services/data.service';
 
 /*
- * App Component
- * Top Level Component
+ * App Component - Top Level Component
  */
-
 @Component({
-  selector: 'appc-app',
-  styleUrls: ['./app.component.scss'],
-  templateUrl: './app.component.html'
+    selector: 'app-component',
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: [
+        './app.component.scss',
+        '../stylesheets/app.global.scss'
+    ],
+    templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
 
+    constructor(private titleService: Title) { }
 
-  constructor(private titleService: Title) {
+    ngOnInit() {
+        this.setTitle('IFS Proto');
+    }
 
-  }
-
-  ngOnInit() {
-      this.setTitle('Site title');
-  }
-
-  public setTitle(newTitle: string) {
-    this.titleService.setTitle(newTitle);
-  }
+    public setTitle(newTitle: string) {
+        this.titleService.setTitle(newTitle);
+    }
 }

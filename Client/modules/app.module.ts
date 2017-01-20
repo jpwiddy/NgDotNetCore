@@ -8,7 +8,6 @@ import { routing }        from './app.routes';
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
 import { SharedModule }  from './shared/shared.module';
-import { HomeModule }  from './home/home.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -18,8 +17,7 @@ import { HomeModule }  from './home/home.module';
         // FormsModule,
         HttpModule,
         // Only module that app module loads
-        SharedModule.forRoot(),
-        HomeModule
+        SharedModule.forRoot()
     ],
     providers: [
         AppService

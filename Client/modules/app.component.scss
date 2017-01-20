@@ -1,2 +1,9 @@
-@import '../styles/_variables.scss';
+@import './_variables.scss';
 
+.app-content {
+    padding-top: 5rem;
+    z-index: 10;
+}
+.ml-icon-bar {
+    margin-left: 3.75em;
+}

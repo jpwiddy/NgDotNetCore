@@ -1,0 +1,42 @@
+.icon-menu {
+    // hide webkit's y scrollbar
+    ::-webkit-scrollbar { 
+        display: none; 
+    }	
+
+	position: fixed;
+    top: 3.75em;
+    left: 0;
+	bottom: 0;
+	width: 3.75em;
+	height: 100%;
+	background-color: #898989;
+    // overflow-y: scroll;
+
+	ul {
+		list-style: none;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		overflow-y: scroll;
+
+        // Had to use pixels because icons require pixel sizing
+		li {
+			font-size: 1.5em;
+			height: 56px;
+			width: 100%;
+			line-height: 56px;
+			text-align: center;
+			color: #ffffff;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+		}
+		li.active {
+			background-color: #747474;
+		}
+        li:hover {
+            background-color: #747474;
+            transform: scale(1.1);
+        }
+	}
+}

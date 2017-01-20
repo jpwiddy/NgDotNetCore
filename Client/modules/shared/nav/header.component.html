@@ -1,0 +1,60 @@
+<div>
+    <header class="navbar navbar-light">
+        <nav class="navbar navbar-toggleable-sm navbar-inverse navbar-ifs fixed-top">
+            <!-- mobile only -->
+            <!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>-->
+            <!-- desktop only -->
+            <a class="navbar-brand">
+                <a class="nav-menu-btn" (click)="sideNavOpen = !sideNavOpen;">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <img routerLink="" src="http://www.ifsworld.com/content/images/logo.png" width="36" height="36" class="d-inline-block align-top"
+                    alt="IFS LOGO">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul *ngIf="!authService.isLoggedIn()" class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="admin">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="register">Register</a>
+                    </li>
+                </ul>
+                <form *ngIf="authService.isLoggedIn() && authService.user()" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <div *ngIf="authService.isLoggedIn() && authService.user()" ngbDropdown class="d-inline-block">
+                    <button class="btn btn-link" id="dropdown-topbar-user" ngbDropdownToggle>
+                        <span  class="ion-person">&nbsp;&nbsp;Jakwus</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-topbar-user">
+                        <button class="dropdown-item">My Account</button>
+                        <button class="dropdown-item">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- left slide out menu -->
+    <div id="st-container" class="st-container st-effect" [class.st-menu-open]="sideNavOpen">
+        <nav class="st-menu st-effect" id="menu-1">
+            <div class="form-group">
+                <input type="email" class="form-control form-control-lg quick-search" placeholder="Quick Search...">
+            </div>
+            <ul>
+                <li><a routerLink="admin" routerLinkActive="active"><span class="fa fa-user-o"></span>&nbsp;Admin</a></li>
+                <li><a routerLink=""><span class="fa fa-bank"></span>&nbsp;Data Management</a></li>
+                <li><a routerLink=""><span class="fa fa-barcode"></span>&nbsp;Location</a></li>
+                <li><a routerLink=""><span class="fa fa-bolt"></span>&nbsp;Study</a></li>
+                <li><a routerLink=""><span class="fa fa-bookmark"></span>&nbsp;Collections</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
