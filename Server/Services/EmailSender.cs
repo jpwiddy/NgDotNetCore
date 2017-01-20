@@ -4,11 +4,11 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MimeKit;
-using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Repositories.Abstract;
-using AspNetCoreSpa.Server.Services.Abstract;
+using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Repositories.Abstract;
+using NgDotNetCore.Server.Services.Abstract;
 
-namespace AspNetCoreSpa.Server.Services
+namespace NgDotNetCore.Server.Services
 {
     public class EmailSender : IEmailSender
     {

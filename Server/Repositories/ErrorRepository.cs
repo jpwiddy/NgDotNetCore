@@ -1,7 +1,7 @@
-﻿using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Repositories.Abstract;
+﻿using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Repositories.Abstract;
 
-namespace AspNetCoreSpa.Server.Repositories
+namespace NgDotNetCore.Server.Repositories
 {
     public class LoggingRepository : EntityBaseRepository<Error>, ILoggingRepository
     {

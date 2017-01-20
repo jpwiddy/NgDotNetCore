@@ -5,11 +5,11 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
-using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Repositories.Abstract;
-using AspNetCoreSpa.Server.Services.Abstract;
+using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Repositories.Abstract;
+using NgDotNetCore.Server.Services.Abstract;
 
-namespace AspNetCoreSpa.Server.Services
+namespace NgDotNetCore.Server.Services
 {
     // This class is used by the application to send Email and SMS
     // when you turn on two-factor authentication in ASP.NET Identity.

@@ -1,14 +1,14 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Extensions;
-using AspNetCoreSpa.Server.Repositories.Abstract;
-using AspNetCoreSpa.Server.ViewModels;
+using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Extensions;
+using NgDotNetCore.Server.Repositories.Abstract;
+using NgDotNetCore.Server.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreSpa.Server.Controllers.api
+namespace NgDotNetCore.Server.Controllers.api
 {
     [Route("api/[controller]")]
     public class ProfileController : BaseController

@@ -20,7 +20,7 @@
 * [Server](https://github.com/aspnet/dotnet-watch) and [client](https://webpack.github.io/docs/hot-module-replacement.html) watches
 * Login and Registration functionality using [Asp.Net Identity](https://docs.asp.net/en/latest/security/authentication/identity.html)
 * Extensible User/Role identity implementation
-* Various social login support, Follow [this](https://github.com/asadsahi/AspNetCoreSpa/wiki/Social-Login-Setup) wiki page to see how it will work.
+* Various social login support, Follow [this](https://github.com/asadsahi/NgDotNetCore/wiki/Social-Login-Setup) wiki page to see how it will work.
 * Lazy loading of all routes, child routes
 * [Angular 2 dynamic forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html) for reusability and to keep html code DRY.
 * [Serilog](https://serilog.net/) with [Seq](https://getseq.net/) support to manage structured logging.
@@ -37,9 +37,9 @@
 ## Installation
 ```
 1. Clone the repo
-    git clone https://github.com/jpwiddy/AspNetCoreSpa
+    git clone https://github.com/jpwiddy/NgDotNetCore
 2. Change directory to our repo
-    cd AspNetCoreSpa
+    cd NgDotNetCore
 3. dotnet restore
 4. Install global dependencies
     npm install protractor rimraf -g

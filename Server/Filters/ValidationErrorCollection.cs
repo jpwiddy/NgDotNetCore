@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AspNetCoreSpa.Server.Filters
+namespace NgDotNetCore.Server.Filters
 {
     /// <summary>
     /// A collection of ValidationError objects that is used to collect

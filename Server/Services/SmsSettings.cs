@@ -1,4 +1,4 @@
-namespace AspNetCoreSpa.Server.Services
+namespace NgDotNetCore.Server.Services
 {
     public class SmsSettings
     {

@@ -1,14 +1,14 @@
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreSpa.Server.Entities;
-using AspNetCoreSpa.Server.Services.Abstract;
-using AspNetCoreSpa.Server.ViewModels.ManageViewModels;
+using NgDotNetCore.Server.Entities;
+using NgDotNetCore.Server.Services.Abstract;
+using NgDotNetCore.Server.ViewModels.ManageViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace AspNetCoreSpa.Server.Controllers.api
+namespace NgDotNetCore.Server.Controllers.api
 {
     [Authorize]
     public class ManageController : BaseController

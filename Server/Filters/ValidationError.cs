@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Text;
 
-namespace AspNetCoreSpa.Server.Filters
+namespace NgDotNetCore.Server.Filters
 {
 
 	/// <summary>

@@ -2,13 +2,13 @@
 
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreSpa.Server.Entities;
+using NgDotNetCore.Server.Entities;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.PlatformAbstractions;
 
-namespace AspNetCoreSpa.Server.Controllers
+namespace NgDotNetCore.Server.Controllers
 {
     public class HomeController : Controller
     {

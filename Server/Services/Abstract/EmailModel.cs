@@ -1,4 +1,4 @@
-namespace AspNetCoreSpa.Server.Services.Abstract
+namespace NgDotNetCore.Server.Services.Abstract
 {
     public class EmailModel
     {
