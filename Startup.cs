@@ -1,28 +1,16 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
-using AspNet.Security.OAuth.GitHub;
-using AspNet.Security.OAuth.LinkedIn;
 using Microsoft.AspNetCore.Antiforgery;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Server.Kestrel;
 using Microsoft.AspNetCore.SpaServices.Webpack;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NgDotNetCore.Server;
-using NgDotNetCore.Server.Entities;
 using NgDotNetCore.Server.Filters;
-using NgDotNetCore.Server.Repositories;
-using NgDotNetCore.Server.Repositories.Abstract;
-using NgDotNetCore.Server.Services;
-using NgDotNetCore.Server.Services.Abstract;
 using Serilog;
 
 namespace NgDotNetCore
@@ -55,7 +43,6 @@ namespace NgDotNetCore
             if (env.IsDevelopment())
             {
                 // For more details on using the user secret store see http://go.microsoft.com/fwlink/?LinkID=532709
-                builder.AddUserSecrets();
             }
 
             Configuration = builder.Build();
@@ -81,54 +68,13 @@ namespace NgDotNetCore
             services.AddResponseCompression();
 
             // Add framework services.
-            services.AddDbContext<ApplicationDbContext>(options =>
-            {
-                string useSqLite = Configuration["Data:useSqLite"];
-                if (useSqLite.ToLower() == "true")
-                {
-                    options.UseSqlite(Configuration["Data:SqlLiteConnectionString"]);
-                }
-                else
-                {
-                    options.UseSqlServer(Configuration["Data:SqlServerConnectionString"]);
-                }
-
-            });
 
             // For api unauthorised calls return 401 with no body
-            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
-            {
-                options.Cookies.ApplicationCookie.LoginPath = "/login";
-                options.Cookies.ApplicationCookie.Events = new CookieAuthenticationEvents
-                {
-                    OnRedirectToLogin = ctx =>
-                    {
-                        if (ctx.Request.Path.StartsWithSegments("/api") &&
-                            ctx.Response.StatusCode == (int)HttpStatusCode.OK)
-                        {
-                            ctx.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                        }
-                        else
-                        {
-                            ctx.Response.Redirect(ctx.RedirectUri);
-                        }
-                        return Task.FromResult(0);
-                    }
-                };
-            })
-            .AddEntityFrameworkStores<ApplicationDbContext, int>()
-            .AddDefaultTokenProviders();
 
             // In memory caching
             services.AddMemoryCache();
 
             // New instance every time, only configuration class needs so its ok
-            services.AddTransient<UserResolverService>();
-            services.AddScoped<ILoggingRepository, LoggingRepository>();
-            services.AddTransient<IEmailSender, EmailSender>();
-            services.AddTransient<ISmsSender, SmsSender>();
-            services.Configure<SmsSettings>(options => Configuration.GetSection("SmsSettingsTwillio").Bind(options));
-            services.AddTransient<SeedDbData>();
 
             services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
 
@@ -149,7 +95,7 @@ namespace NgDotNetCore
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public async void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IAntiforgery antiforgery, SeedDbData seedData)
+        public async void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IAntiforgery antiforgery)
         {
             if (env.IsDevelopment())
             {
@@ -181,7 +127,7 @@ namespace NgDotNetCore
                 {
                     using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
                     {
-                        serviceScope.ServiceProvider.GetService<ApplicationDbContext>().Database.Migrate();
+                        // serviceScope.ServiceProvider.GetService<ApplicationDbContext>().Database.Migrate();
                     }
                 }
                 catch (Exception) { }
@@ -202,52 +148,6 @@ namespace NgDotNetCore
 
             app.UseStaticFiles();
 
-            app.UseIdentity();
-
-            // // Facebook Auth
-            // app.UseFacebookAuthentication(new FacebookOptions()
-            // {
-            //     AppId = Configuration["Authentication:Facebook:AppId"],
-            //     AppSecret = Configuration["Authentication:Facebook:AppSecret"]
-            // });
-            // // Google Auth
-            // app.UseGoogleAuthentication(new GoogleOptions()
-            // {
-            //     ClientId = Configuration["Authentication:Google:ClientId"],
-            //     ClientSecret = Configuration["Authentication:Google:ClientSecret"]
-            // });
-            // // Twitter Auth
-            // // https://apps.twitter.com/
-            // app.UseTwitterAuthentication(new TwitterOptions()
-            // {
-            //     ConsumerKey = Configuration["Authentication:Twitter:ConsumerKey"],
-            //     ConsumerSecret = Configuration["Authentication:Twitter:ConsumerSecret"]
-            // });
-            // // Microsoft Auth
-            // // https://apps.dev.microsoft.com/?mkt=en-us#/appList
-            // app.UseMicrosoftAccountAuthentication(new MicrosoftAccountOptions()
-            // {
-            //     ClientId = Configuration["Authentication:Microsoft:ClientId"],
-            //     ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"]
-            // });
-
-            // // Note: Below social providers are supported through this open source library:
-            // // https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers
-
-            // // Github Auth
-            // // https://github.com/settings/developers
-            // app.UseGitHubAuthentication(new GitHubAuthenticationOptions
-            // {
-            //     ClientId = Configuration["Authentication:Github:ClientId"],
-            //     ClientSecret = Configuration["Authentication:Github:ClientSecret"]
-            // });
-
-            // app.UseLinkedInAuthentication(new LinkedInAuthenticationOptions
-            // {
-            //     ClientId = Configuration["Authentication:LinkedIn:ClientId"],
-            //     ClientSecret = Configuration["Authentication:LinkedIn:ClientSecret"]
-            // });
-
             app.UseMvc(routes =>
             {
                 routes.MapSpaFallbackRoute(
@@ -255,8 +155,6 @@ namespace NgDotNetCore
                     defaults: new { controller = "Home", action = "Index" });
             });
 
-
-            await seedData.EnsureSeedDataAsync();
         }
     }
 }
