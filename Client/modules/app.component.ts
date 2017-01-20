@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     constructor(private titleService: Title) { }
 
     ngOnInit() {
-        this.setTitle('Site title');
+        this.setTitle('IFS Proto');
     }
 
     public setTitle(newTitle: string) {

@@ -1,11 +1,11 @@
 <div>
     <header class="navbar navbar-light">
-        <nav class="navbar navbar-toggleable-md navbar-inverse navbar-ifs fixed-top">
+        <nav class="navbar navbar-toggleable-sm navbar-inverse navbar-ifs fixed-top">
             <!-- mobile only -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            <!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-            </button>
+            </button>-->
             <!-- desktop only -->
             <a class="navbar-brand">
                 <a class="nav-menu-btn" (click)="sideNavOpen = !sideNavOpen;">
@@ -32,7 +32,7 @@
                 </form>
                 <div *ngIf="authService.isLoggedIn() && authService.user()" ngbDropdown class="d-inline-block">
                     <button class="btn btn-link" id="dropdown-topbar-user" ngbDropdownToggle>
-                        <span  class="ion-person">&nbsp;&nbsp;JAKWUS</span>
+                        <span  class="ion-person">&nbsp;&nbsp;Jakwus</span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-topbar-user">
                         <button class="dropdown-item">My Account</button>
@@ -49,11 +49,11 @@
                 <input type="email" class="form-control form-control-lg quick-search" placeholder="Quick Search...">
             </div>
             <ul>
-                <li><a class="icon icon-data" href="#">Data Management</a></li>
-                <li><a class="icon icon-location" href="#">Location</a></li>
-                <li><a class="icon icon-study" href="#">Study</a></li>
-                <li><a class="icon icon-photo" href="#">Collections</a></li>
-                <li><a class="icon icon-wallet" href="#">Credits</a></li>
+                <li><a routerLink="admin" routerLinkActive="active"><span class="fa fa-user-o"></span>&nbsp;Admin</a></li>
+                <li><a routerLink=""><span class="fa fa-bank"></span>&nbsp;Data Management</a></li>
+                <li><a routerLink=""><span class="fa fa-barcode"></span>&nbsp;Location</a></li>
+                <li><a routerLink=""><span class="fa fa-bolt"></span>&nbsp;Study</a></li>
+                <li><a routerLink=""><span class="fa fa-bookmark"></span>&nbsp;Collections</a></li>
             </ul>
         </nav>
     </div>

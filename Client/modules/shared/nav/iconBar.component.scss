@@ -31,6 +31,9 @@
             cursor: pointer;
             transition: all .2s ease-in-out;
 		}
+		li.active {
+			background-color: #747474;
+		}
         li:hover {
             background-color: #747474;
             transform: scale(1.1);
