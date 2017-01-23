@@ -43,7 +43,7 @@
         </nav>
     </header>
     <!-- left slide out menu -->
-    <div id="st-container" class="st-container st-effect" [class.st-menu-open]="sideNavOpen">
+    <div id="st-container" class="st-container st-effect" [class.st-menu-open]="sideNavOpen" (click)="sideNavOpen = !sideNavOpen;">
         <nav class="st-menu st-effect" id="menu-1">
             <div class="form-group">
                 <input type="email" class="form-control form-control-lg quick-search" placeholder="Quick Search...">

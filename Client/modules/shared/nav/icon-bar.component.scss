@@ -1,9 +1,6 @@
 .icon-menu {
     // hide webkit's y scrollbar
-    ::-webkit-scrollbar { 
-        display: none; 
-    }	
-
+	z-index: 50;
 	position: fixed;
     top: 3.75em;
     left: 0;

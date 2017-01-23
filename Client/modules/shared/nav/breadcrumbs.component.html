@@ -1,0 +1,11 @@
+<div>
+    <br>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" (click)="selectCrumb(-1)">
+            <a [textContent]="rootPage.title"></a>
+        </li>
+        <li *ngFor="let crumb of crumbs; let idx = index;" class="breadcrumb-item" (click)="selectCrumb(idx); false;">
+            <a [class.active]="crumbs.length && (idx === crumbs.length - 1)" [textContent]="crumb.title"></a>
+        </li>
+    </ol>
+</div>
