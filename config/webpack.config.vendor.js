@@ -17,7 +17,7 @@ module.exports = {
     },
     entry: {
         polyfills: [
-            'core-js',
+            'core-js/client/shim',
             'zone.js/dist/zone',
             'reflect-metadata'
         ],
@@ -34,8 +34,7 @@ module.exports = {
             '@angular/router',
             'rxjs',
             '@ng-bootstrap/ng-bootstrap',
-            'zone.js',
-            'reflect-metadata'
+            'zone.js'
         ]
     },
     output: {
