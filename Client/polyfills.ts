@@ -1,3 +1,7 @@
+var isDevBuild = process.argv.indexOf('--env.prod') < 0;
+
+// Polyfills
+
 // Added parts of es6 which are necessary for your project or your browser support requirements.
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';
@@ -16,8 +20,24 @@ import 'core-js/es6/weak-map';
 import 'core-js/es6/weak-set';
 import 'core-js/es6/typed';
 import 'core-js/es6/reflect';
-// see issue https://github.com/AngularClass/angular2-webpack-starter/issues/709
-// import 'core-js/es6/promise';
 
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
+
+import 'zone.js/dist/zone';
+
+// Typescript emit helpers polyfill
+import 'ts-helpers';
+
+if (isDevBuild) {
+  // Production
+
+} else {
+
+  // Development
+  Error.stackTraceLimit = Infinity;
+
+  /* tslint:disable no-var-requires */
+  require('zone.js/dist/long-stack-trace-zone');
+
+}
