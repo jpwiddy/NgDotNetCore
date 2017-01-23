@@ -34,8 +34,8 @@ module.exports = merge({
         ]
     },
     entry: {
-        'main': './Client/main.ts',
-        'polyfills': './Client/polyfills.ts'
+        'polyfills': './Client/polyfills.ts',
+        'main': './Client/main.ts'
     },
     output: {
         path: path.join(__dirname, '../wwwroot', 'dist'),

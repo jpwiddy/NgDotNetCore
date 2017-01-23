@@ -16,11 +16,11 @@ module.exports = {
         ]
     },
     entry: {
-        polyfills: [
-            'core-js/client/shim',
-            'zone.js/dist/zone',
-            'reflect-metadata'
-        ],
+        // polyfills: [
+            // 'core-js/client/shim',
+            // 'zone.js/dist/zone',
+            // 'reflect-metadata'
+        // ],
         vendor: [
             'font-awesome/scss/font-awesome.scss',
             'bootstrap/scss/bootstrap.scss',
@@ -34,7 +34,8 @@ module.exports = {
             '@angular/router',
             'rxjs',
             '@ng-bootstrap/ng-bootstrap',
-            'zone.js'
+            'zone.js',
+            'reflect-metadata'
         ]
     },
     output: {
