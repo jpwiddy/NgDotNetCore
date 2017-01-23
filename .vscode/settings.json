@@ -4,6 +4,8 @@
         "**/.git": true,
         "**/.DS_Store": true,
         ".vs": true,
+        "bin": true,
+        "obj": true,
         "project.lock.json": true,
         "NgDotNetCore.xproj": true,
         "NgDotNetCore.sln": true,
@@ -15,7 +17,6 @@
     "search.exclude": {
         "**/node_modules": true,
         "Client/**/*.js": true,
-        "Client/**/*.js.map": true,
-        "bin": true
+        "Client/**/*.js.map": true
     }
 }
