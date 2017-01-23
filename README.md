@@ -43,13 +43,13 @@
 
 5. npm install
     Note: On Windows machines (Visual Studio 15), there tends to be issues with the `node-sass` plugin
-    if VS automagically installs your node dependencies for you. TLDR it'll be complaining about architecture not matching bindings.
-    If this is the case, please do the following:
+    if VS automagically installs your node dependencies for you. TLDR it'll be complaining about
+    architecture not matching bindings. If this is the case, please do the following:
         > rm node_modules # or just delete then manually via file browser
         > npm install # manually install deps
         > npm rebuild node-sass
 
-6. Create webpack vendor manifest file for fast webpack rebuils
+6. Create webpack vendor manifest file for fast webpack rebuilds
     For Development: 
         > npm run build:dev
     For Production: 
@@ -86,7 +86,8 @@ npm run docs
 ```
 ### run end-to-end tests
 ```bash
-# make sure you have your server running in another terminal (i.e run "dotnet run" command) AND your webdrivers are updated
+# make sure you have your server running in another terminal (i.e run "dotnet run" command)
+# AND make sure your webdrivers are updated
 npm run e2e
 ```
 
