@@ -19,6 +19,7 @@ module.exports = {
         vendor: [
             'font-awesome/scss/font-awesome.scss',
             'bootstrap/scss/bootstrap.scss',
+            
             '@angular/common',
             '@angular/compiler',
             '@angular/core',
@@ -28,8 +29,9 @@ module.exports = {
             '@angular/platform-browser-dynamic',
             '@angular/router',
             'rxjs',
-            '@ng-bootstrap/ng-bootstrap',
-            'zone.js'
+            'zone.js',
+
+            '@ng-bootstrap/ng-bootstrap'
         ]
     },
     output: {
