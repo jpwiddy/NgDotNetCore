@@ -2,29 +2,23 @@
 
 * [ASP.NET Core](http://www.dot.net/)
 * [Entity Framework Core](https://docs.efproject.net/en/latest/)
-* [Angular 2.0.0 Final](https://angular.io/)
+* [Angular 2.4.3 Final](https://angular.io/) & [Typescript 2](http://www.typescriptlang.org/)
 * [Webpack 2](https://webpack.github.io/)
-* [Bootstrap 4](http://v4-alpha.getbootstrap.com/)
-* [ng-bootstrap](https://ng-bootstrap.github.io/)
-* [Typescript 2](http://www.typescriptlang.org/)
-* [SASS](http://sass-lang.com/) support
-* [Best practices](https://angular.io/docs/ts/latest/guide/style-guide.html) in file and application organization for Angular 2.
+* [Bootstrap 4](http://v4-alpha.getbootstrap.com/) (SASS) & [ng-bootstrap](https://ng-bootstrap.github.io/)
 * Testing Angular 2 code with [Jasmine](http://jasmine.github.io/) and [Karma](https://karma-runner.github.io/0.13/index.html).
 * End-to-end Angular 2 code using [Protractor](http://www.protractortest.org).
 * [Istanbul](https://github.com/gotwarlost/istanbul) for test coverage
   * with [Remap Istanbul](https://github.com/SitePen/remap-istanbul) for remapping Javascript to TypeScript coverage
 * Type manager with [Typings](https://github.com/typings/typings)
-* [HMR](https://webpack.github.io/docs/hot-module-replacement.html) (Hot Module Replacement) with Webpack
-* Webpack DLL support for fast rebuilds (~ < 0.5 second)
 * [Typedoc](http://typedoc.io/) for typescript documentation
-* [Server](https://github.com/aspnet/dotnet-watch) and [client](https://webpack.github.io/docs/hot-module-replacement.html) watches
-* Login and Registration functionality using [Asp.Net Identity](https://docs.asp.net/en/latest/security/authentication/identity.html)
-* Extensible User/Role identity implementation
-* Various social login support, Follow [this](https://github.com/asadsahi/NgDotNetCore/wiki/Social-Login-Setup) wiki page to see how it will work.
-* Lazy loading of all routes, child routes
-* [Angular 2 dynamic forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html) for reusability and to keep html code DRY.
 * [Serilog](https://serilog.net/) with [Seq](https://getseq.net/) support to manage structured logging.
 * [Swagger](http://swagger.io/) as Api explorer (Visit url **http://localhost:5000/swagger/ui** after running the application)
+  
+* [Server](https://github.com/aspnet/dotnet-watch) and [client](https://webpack.github.io/docs/hot-module-replacement.html) watches
+* [HMR](https://webpack.github.io/docs/hot-module-replacement.html) (Hot Module Replacement) with Webpack
+* [Angular 2 dynamic forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html) for reusability and to keep html code DRY.
+* Webpack DLL support for fast rebuilds (~ < 0.5 second)
+* Lazy loading of all routes, child routes
  
 ## Pre-requisites
 
@@ -38,26 +32,40 @@
 ```
 1. Clone the repo
     git clone https://github.com/jpwiddy/NgDotNetCore
+
 2. Change directory to our repo
     cd NgDotNetCore
+
 3. dotnet restore
+
 4. Install global dependencies
-    npm install protractor rimraf -g
+    npm install --global webpack typescript protractor rimraf 
+
 5. npm install
+    Note: On Windows machines (Visual Studio 15), there tends to be issues with the `node-sass` plugin
+    if VS automagically installs your node dependencies for you. TLDR it'll be complaining about architecture not matching bindings.
+    If this is the case, please do the following:
+        > rm node_modules # or just delete then manually via file browser
+        > npm install # manually install deps
+        > npm rebuild node-sass
+
 6. Create webpack vendor manifest file for fast webpack rebuils
-    For Development: npm run build:dev
-    For Production: npm run build:prod 
+    For Development: 
+        > npm run build:dev
+    For Production: 
+        > npm run build:prod 
+
 8. Run the app:
-    1) One way - 
+    Note: To setup Development build with HMR, first run in dev console- 
         Windows:
             `set ASPNETCORE_ENVIRONMENT=Development`
-        OSX:
+        *nix/OSX:
             `export ASPNETCORE_ENVIRONMENT=Development`
-    `dotnet run` (for single run) OR `dotnet watch run` (in watch mode)
-    2) Another way:
-    Just F5 key if you are using VS code editor or Visual Studio IDE
-9. Browse using http://localhost:5000 or http://localhost:5001 
+    Two ways to run:
+        1) `dotnet run` (for single run) OR `dotnet watch run` (in watch mode)
+        2) Just F5 key if you are using VS code editor or Visual Studio IDE
 
+9. Browse using http://localhost:5000 or http://localhost:5001 
 ```
 
 ## Other commands
@@ -78,7 +86,7 @@ npm run docs
 ```
 ### run end-to-end tests
 ```bash
-# make sure you have your server running in another terminal (i.e run "dotnet run" command)
+# make sure you have your server running in another terminal (i.e run "dotnet run" command) AND your webdrivers are updated
 npm run e2e
 ```
 

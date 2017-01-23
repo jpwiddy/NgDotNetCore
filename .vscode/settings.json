@@ -16,6 +16,7 @@
     },
     "search.exclude": {
         "**/node_modules": true,
+        "wwwroot/dist": true,
         "Client/**/*.js": true,
         "Client/**/*.js.map": true
     }

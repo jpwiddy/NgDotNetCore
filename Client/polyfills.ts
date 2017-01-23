@@ -1,4 +1,4 @@
-//TODO: var isDevBuild
+// TODO: var isDevBuild
 
 // Polyfills
 
@@ -11,12 +11,12 @@ import 'reflect-metadata';
 import 'ts-helpers';
 
 // TODO:
-//if (isDevBuild) {
-//  // Development
+// if (isDevBuild) {
+//  /* Development */
 //  Error.stackTraceLimit = Infinity;
 
 //  /* tslint:disable no-var-requires */
 //  require('zone.js/dist/long-stack-trace-zone');
-//} else {
-//  // Production
-//}
+// } else {
+//  /* Production */
+// }
