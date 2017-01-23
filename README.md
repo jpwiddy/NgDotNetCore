@@ -13,7 +13,6 @@
 * [Typedoc](http://typedoc.io/) for typescript documentation
 * [Serilog](https://serilog.net/) with [Seq](https://getseq.net/) support to manage structured logging.
 * [Swagger](http://swagger.io/) as Api explorer (Visit url **http://localhost:5000/swagger/ui** after running the application)
-  
 * [Server](https://github.com/aspnet/dotnet-watch) and [client](https://webpack.github.io/docs/hot-module-replacement.html) watches
 * [HMR](https://webpack.github.io/docs/hot-module-replacement.html) (Hot Module Replacement) with Webpack
 * [Angular 2 dynamic forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html) for reusability and to keep html code DRY.
