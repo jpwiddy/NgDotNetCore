@@ -6,6 +6,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { DateTimeComponent } from './forms/date-time.component';
 import { DynamicFormComponent } from './forms/dynamic-form.component';
 import { DynamicFormControlComponent } from './forms/dynamic-form-control.component';
 import { ErrorMessageComponent } from './forms/error-message.component';
@@ -48,6 +49,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         OneComponent,
         TwoComponent,
         ThreeComponent,
+        DateTimeComponent,
         DynamicFormComponent,
         DynamicFormControlComponent,
         ErrorMessageComponent,
@@ -70,6 +72,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         OneComponent,
         TwoComponent,
         ThreeComponent,
+        DateTimeComponent,
         DynamicFormComponent,
         DynamicFormControlComponent,
         ErrorSummaryComponent,

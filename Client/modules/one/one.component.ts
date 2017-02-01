@@ -12,7 +12,6 @@ import { ContentService } from '../shared/services/content.service';
 export class OneComponent implements OnInit {
     pageManager: any;
     componentContext: any = false;
-    user: any = {};
 
     constructor(private injector: Injector, private contentService: ContentService, private app: AppService) {
         /***
@@ -26,10 +25,6 @@ export class OneComponent implements OnInit {
     selectPage(id: string) {
         let newPage: PageContext = this.contentService.getPage(id);
         this.pageManager.selectPage(newPage);
-    }
-
-    onSubmitTemplateBased() {
-        console.log(this);
     }
 
     ngOnInit() {

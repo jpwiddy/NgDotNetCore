@@ -1,0 +1,47 @@
+<div>
+    <div class="row">
+        <div class="col">
+            <div class="date-time">
+                <input type="datetime" name="date-time-input" class="form-control" placeholder="" [(ngModel)]="dateTime" (blur)="blurred($event)">
+                <div class="input-group-btn">
+                    <div ngbDropdown class="d-inline-block" #datetimeDropdown="ngbDropdown">
+                        <button class="btn btn-primary" id="datetimeDropdown" ngbDropdownToggle (click)="toggle()">
+                            <i class="toggler fa fa-calendar" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="datetimeDropdown">
+
+                            <div class="dropdown-container" [class.active]="showTime">
+
+                                <div class="sect date-picker">
+                                    <div class="row ">
+                                        <div class="col">
+                                            <ngb-datepicker #dp [(ngModel)]="dateModel" (ngModelChange)="modelChanged()" (navigate)="date = $event.next" [dayTemplate]="customDay"></ngb-datepicker>
+                                            <template #customDay let-date="date" let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled">
+                                                <span class="custom-day" [class.weekend]="isWeekend(date)" [class.bg-primary]="selected" [class.hidden]="date.month !== currentMonth"
+                                                    [class.text-muted]="disabled"> {{ date.day }} </span>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-outline-primary btn-block" (click)="showTime = !showTime">
+                                    <i class="fa" [class.fa-calendar]="showTime" [class.fa-clock-o]="!showTime" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="sect time-picker">
+                                    <div class="row">
+                                        <div class="col flex">
+                                            <ngb-timepicker name="time" [(ngModel)]="timeModel" (ngModelChange)="modelChanged()" [spinners]="true" [hourStep]="1" [minuteStep]="5" [meridian]="true"></ngb-timepicker>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
