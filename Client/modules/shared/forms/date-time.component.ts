@@ -14,7 +14,6 @@ export class DateTimeComponent implements OnInit {
     @ViewChild(NgbDropdown) datetimeDropdown: NgbDropdown;
     @Input() formModel: any;    // External model bound back to parent
     @Output() formModelChange = new EventEmitter();
-    @Input() today: boolean;    // Default day to today 
 
     dateTime: any; // Used internally on internal input
     timeModel: NgbTimeStruct;
@@ -23,30 +22,26 @@ export class DateTimeComponent implements OnInit {
     showTime: boolean;
 
     constructor(private config: NgbDropdownConfig) {
-        this.today = false;
         config.autoClose = false;
         this.showTime = false;
     }
 
     ngOnInit() {
-        if (!this.formModel && this.today) {
-            this.setDefaultDate();
-            this.setDefaultTime();
+        let start = this.formModel ? Moment(this.formModel) : Moment();
+        this.setDefaultDate(start);
+        this.setDefaultTime(start);
+        
+        if (this.formModel) {
             this.modelChanged(null);
-        } else {
-            this.dateTime = Moment(this.formModel);
         }
-
     }
 
-    setDefaultDate() {
-        let start = Moment();
+    setDefaultDate(start: any) {
         this.dateModel = { year: start.year(), month: start.month() + 1, day: start.date() }
     }
 
-    setDefaultTime() {
-        let start = Moment(),
-            remainder = 5 - start.minute() % 5,
+    setDefaultTime(start: any) {
+        let remainder = 5 - start.minute() % 5,
             final = Moment(start).add(remainder, 'minutes');
 
         // Seed time model with current, rounding up to nearest 5 minutes (does roll hour over if needed)
