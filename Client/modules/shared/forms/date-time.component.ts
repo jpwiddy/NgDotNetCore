@@ -30,7 +30,7 @@ export class DateTimeComponent implements OnInit {
         let start = this.formModel ? Moment(this.formModel) : Moment();
         this.setDefaultDate(start);
         this.setDefaultTime(start);
-        
+
         if (this.formModel) {
             this.modelChanged(null);
         }

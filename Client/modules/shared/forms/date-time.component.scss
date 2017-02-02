@@ -21,10 +21,14 @@
         
         .dropdown-container {
             .date-picker {
-                max-height: 210px;
+                max-height: 240px;
+                
+                .ngb-datepicker {
+                    border: none;
+                }
 
                 // Style for custom day on datepicker
-                .custom-day {      
+                .custom-day {
                     text-align: center;
                     padding: 0.185rem 0.25rem;
                     border-radius: 0.25rem;
@@ -51,8 +55,6 @@
                 max-height: 0;
                 .col {
                     padding: 2em;
-                    // padding-left: 2em;
-                    // padding-right: 2em;
                 }
             }
 
