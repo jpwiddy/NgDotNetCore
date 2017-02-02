@@ -7,7 +7,7 @@
         border-bottom-left-radius: 0;
         border-left: 0;
     }
-    .show > .dropdown-menu {
+    .show>.dropdown-menu {
         display: inline-block;
     }
     .dropdown-toggle:after {
@@ -18,15 +18,12 @@
         padding: 1em;
         min-width: auto;
         width: auto;
-        
         .dropdown-container {
             .date-picker {
                 max-height: 240px;
-                
                 .ngb-datepicker {
                     border: none;
                 }
-
                 // Style for custom day on datepicker
                 .custom-day {
                     text-align: center;
@@ -34,7 +31,6 @@
                     border-radius: 0.25rem;
                     display: inline-block;
                     width: 2rem;
-                    
                     &.bg-primary {
                         color: white;
                     }
@@ -57,31 +53,26 @@
                     padding: 2em;
                 }
             }
-
             &.active {
                 .date-picker {
-                max-height: 0px;
+                    max-height: 0px;
                 }
                 .time-picker {
-                max-height: 210px;
+                    max-height: 210px;
                 }
             }
-            }
-
-            .sect {
+        }
+        .sect {
             max-height: 0;
             overflow: hidden;
-            
             &.date-picker {
                 transition: max-height 0.4s ease;
                 height: auto;
             }
-            
             &.time-picker {
                 transition: max-height 0.4s ease;
                 height: auto;
             }
         }
     }
-
 }
