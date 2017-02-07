@@ -18,8 +18,7 @@ module.exports = {
     entry: {
         vendor: [
             'font-awesome/scss/font-awesome.scss',
-            'bootstrap/scss/bootstrap.scss',
-            
+
             '@angular/common',
             '@angular/compiler',
             '@angular/core',

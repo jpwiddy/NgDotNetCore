@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 
-import { PageContext } from '../models/page-context.model';
-import { PageManager } from '../services/page-manager.service';
-
 @Component({
     selector: 'icon-bar',
     styleUrls: ['./icon-bar.component.scss'],
@@ -30,10 +27,7 @@ export class IconBarComponent {
         { title: 'Stats', icon: 'fa fa-area-chart', routeType: 'stats', component: '' }
     ];
 
-    constructor(private pageManager: PageManager) { }
+    constructor() { }
 
-    selectPage(pageData: any, idx: number) {
-        // Copy instance of Page Context, select this new instance
-        this.pageManager.selectPage(new PageContext(pageData));
-    }
+    selectPage(pageData: any, idx: number) { }
 }

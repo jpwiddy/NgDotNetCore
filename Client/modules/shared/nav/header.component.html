@@ -19,12 +19,6 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLinkActive="active" routerLink="admin">Admin</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLinkActive="active" routerLink="register">Register</a>
-                    </li>
                 </ul>
                 <form *ngIf="authService.isLoggedIn() && authService.user()" class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">

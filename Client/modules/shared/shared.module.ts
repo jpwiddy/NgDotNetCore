@@ -7,16 +7,6 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { DateTimeComponent } from './forms/date-time.component';
-import { DynamicFormComponent } from './forms/dynamic-form.component';
-import { DynamicFormControlComponent } from './forms/dynamic-form-control.component';
-import { ErrorMessageComponent } from './forms/error-message.component';
-import { ErrorSummaryComponent } from './forms/error-summary.component';
-import { FormControlService } from './forms/form-control.service';
-
-// Dynamic Components
-import { OneComponent } from '../one/one.component';
-import { TwoComponent } from '../two/two.component';
-import { ThreeComponent } from '../three/three.component';
 
 import { DynamicComponent } from './dynamic-component/dynamic-component.component';
 import { BreadcrumbsComponent } from './nav/breadcrumbs.component';
@@ -25,12 +15,10 @@ import { FooterComponent } from './nav/footer.component';
 import { IconBarComponent } from './nav/icon-bar.component';
 
 // Services
-import { PageManager } from './services/page-manager.service';
 import { DataService } from './services/data.service';
 import { ApiGatewayService } from './services/api-gateway.service';
 import { AuthService } from './services/auth.service';
 import { HttpErrorHandlerService } from './services/http-error-handler.service';
-import { ContentService } from './services/content.service';
 import { UtilityService } from './services/utility.service';
 import { UppercasePipe } from './pipes/uppercase.pipe';
 
@@ -46,14 +34,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         JsonpModule,
     ],
     declarations: [
-        OneComponent,
-        TwoComponent,
-        ThreeComponent,
         DateTimeComponent,
-        DynamicFormComponent,
-        DynamicFormControlComponent,
-        ErrorMessageComponent,
-        ErrorSummaryComponent,
         FooterComponent,
         IconBarComponent,
         DynamicComponent,
@@ -69,14 +50,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         RouterModule,
         NgbModule,
         // Providers, Components, directive, pipes
-        OneComponent,
-        TwoComponent,
-        ThreeComponent,
         DateTimeComponent,
-        DynamicFormComponent,
-        DynamicFormControlComponent,
-        ErrorSummaryComponent,
-        ErrorMessageComponent,
         FooterComponent,
         DynamicComponent,
         BreadcrumbsComponent,
@@ -95,10 +69,7 @@ export class SharedModule {
                 HttpErrorHandlerService,
                 ApiGatewayService,
                 AuthService,
-                PageManager,
                 DataService,
-                ContentService,
-                FormControlService,
                 UtilityService
             ]
         };

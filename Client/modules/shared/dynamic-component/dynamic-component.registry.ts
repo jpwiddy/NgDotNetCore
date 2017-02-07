@@ -1,34 +1,9 @@
 import { Component } from '@angular/core';
 
 // Components
-import { OneComponent } from '../..//one/one.component';
-import { TwoComponent } from '../../two/two.component';
-import { ThreeComponent } from '../../three/three.component';
 
 export default class DynamicComponentRegistry {
-    // FIXME: Might wanna move this to an external file
     private registry: Object = {
-        OneComponent: {
-            name: 'OneComponent',
-            title: 'Airplane',
-            icon: 'fa fa-paper-plane',
-            component: OneComponent,
-            routeType: 'one'
-        },
-        TwoComponent: {
-            name: 'TwoComponent',
-            title: 'Ca$h',
-            icon: 'fa fa-dollar',
-            component: TwoComponent,
-            routeType: 'two'
-        },
-        ThreeComponent: {
-            name: 'ThreeComponent',
-            title: 'Checklist',
-            icon: 'fa fa-check-square',
-            component: ThreeComponent,
-            routeType: 'three'
-        }
     }
 
     constructor() { }

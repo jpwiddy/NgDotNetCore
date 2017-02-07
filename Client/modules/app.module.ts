@@ -9,8 +9,6 @@ import { AppService } from './app.service';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 
-import { PageManager } from './shared/services/page-manager.service';
-
 @NgModule({
     declarations: [
         AppComponent
@@ -29,8 +27,6 @@ import { PageManager } from './shared/services/page-manager.service';
     bootstrap: [AppComponent]
 })
 export class AppModule {
-    /* Initialize singleton of App Service with PageManager */
-    constructor(appService: AppService, pageManager: PageManager) {
-        appService.pageManager = pageManager;
-     }
+    /* Initialize singleton of App Service */
+    constructor(appService: AppService) { }
 }

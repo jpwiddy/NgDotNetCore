@@ -7,8 +7,6 @@
         "bin": true,
         "obj": true,
         "project.lock.json": true,
-        "NgDotNetCore.xproj": true,
-        "NgDotNetCore.sln": true,
         "Client/**/*.js": false,
         "Client/**/*.js.map": false,
         "LICENSE": false,
@@ -19,7 +17,6 @@
         "wwwroot/dist": true,
         "Client/**/*.js": true,
         "Client/**/*.js.map": true
-    }
-,
-"typescript.tsdk": "./node_modules/typescript/lib"
+    },
+    "typescript.tsdk": "./node_modules/typescript/lib"
 }
