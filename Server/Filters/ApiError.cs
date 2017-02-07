@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Linq;
 
-namespace NgDotNetCore.Server.Filters
+namespace FsmWebClient.Server.Filters
 {
 
     public class ApiError

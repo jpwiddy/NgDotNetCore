@@ -1,6 +1,6 @@
 using System;
 
-namespace NgDotNetCore.Server.Filters
+namespace FsmWebClient.Server.Filters
 {
 
     public class ApiException : Exception

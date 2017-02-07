@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Text;
 
-namespace NgDotNetCore.Server.Filters
+namespace FsmWebClient.Server.Filters
 {
 
 	/// <summary>

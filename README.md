@@ -30,10 +30,10 @@
 ## Installation
 ```
 1. Clone the repo
-    git clone https://github.com/jpwiddy/NgDotNetCore
+    git clone https://github.com/jpwiddy/FsmWebClient
 
 2. Change directory to our repo
-    cd NgDotNetCore
+    cd FsmWebClient
 
 3. dotnet restore
 

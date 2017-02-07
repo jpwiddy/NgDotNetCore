@@ -10,10 +10,10 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NgDotNetCore.Server.Filters;
+using FsmWebClient.Server.Filters;
 using Serilog;
 
-namespace NgDotNetCore
+namespace FsmWebClient
 {
     public class Startup
     {

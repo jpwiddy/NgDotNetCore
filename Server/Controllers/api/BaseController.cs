@@ -1,8 +1,8 @@
-using NgDotNetCore.Server.Filters;
+using FsmWebClient.Server.Filters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NgDotNetCore.Server.Controllers.api
+namespace FsmWebClient.Server.Controllers.api
 {
     [Authorize]
     [ServiceFilter(typeof(ApiExceptionFilter))]

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace NgDotNetCore
+namespace FsmWebClient
 {
     public class Program
     {
