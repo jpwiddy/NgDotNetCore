@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\FsmWebClient.dll",
+            "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.1\\FSM.WebClient.dll",
             // "args": ["dropdb", "seeddb"],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,

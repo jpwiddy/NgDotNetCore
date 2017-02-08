@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace FsmWebClient.Server.Filters
+namespace FSM.WebClient.Server.Filters
 {
     public class ApiExceptionFilter : ExceptionFilterAttribute
     {

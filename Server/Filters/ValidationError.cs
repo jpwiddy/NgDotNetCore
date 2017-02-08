@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Text;
 
-namespace FsmWebClient.Server.Filters
+namespace FSM.WebClient.Server.Filters
 {
 
 	/// <summary>

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FsmWebClient.Server.Controllers
+namespace FSM.WebClient.Server.Controllers
 {
     public class HomeController : Controller
     {

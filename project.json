@@ -84,7 +84,7 @@
   },
   "buildOptions": {
     "emitEntryPoint": true,
-    "outputName": "FsmWebClient",
+    "outputName": "FSM.WebClient",
     "preserveCompilationContext": true,
     "compile": {
       "exclude": [
@@ -118,6 +118,6 @@
     ]
   },
   "tooling": {
-    "defaultNamespace": "FsmWebClient"
+    "defaultNamespace": "FSM.WebClient"
   }
 }

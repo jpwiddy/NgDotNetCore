@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace FsmWebClient
+namespace FSM.WebClient
 {
     public class Program
     {

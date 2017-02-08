@@ -30,10 +30,10 @@
 ## Installation
 ```
 1. Clone the repo
-    git clone https://github.com/jpwiddy/FsmWebClient
+    git clone https://github.com/jpwiddy/FSM.WebClient
 
 2. Change directory to our repo
-    cd FsmWebClient
+    cd FSM.WebClient
 
 3. dotnet restore
 

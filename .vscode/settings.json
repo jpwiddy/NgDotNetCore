@@ -1,22 +1,22 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        ".vs": true,
-        "bin": true,
-        "obj": true,
-        "project.lock.json": true,
-        "Client/**/*.js": false,
-        "Client/**/*.js.map": false,
-        "LICENSE": false,
-        "NuGet.config": true
+        // "**/.git": true,
+        // "**/.DS_Store": true,
+        // ".vs": true,
+        // "bin": true,
+        // "obj": true,
+        // "project.lock.json": true,
+        // "Client/**/*.js": false,
+        // "Client/**/*.js.map": false,
+        // "LICENSE": false,
+        // "NuGet.config": true
     },
     "search.exclude": {
-        "**/node_modules": true,
-        "wwwroot/dist": true,
-        "Client/**/*.js": true,
-        "Client/**/*.js.map": true
+        // "**/node_modules": true,
+        // "wwwroot/dist": true,
+        // "Client/**/*.js": true,
+        // "Client/**/*.js.map": true
     },
     "typescript.tsdk": "./node_modules/typescript/lib"
 }
