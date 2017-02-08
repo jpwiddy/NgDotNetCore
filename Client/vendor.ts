@@ -13,7 +13,6 @@ import '@angular/http';
 import '@angular/router';
 
 // import 3rd party libs
-import 'bootstrap';
 import '@ng-bootstrap/ng-bootstrap';
 
 // RxJS

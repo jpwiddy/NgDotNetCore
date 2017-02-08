@@ -1,20 +1,22 @@
-import { NgModule, NgModuleFactoryLoader }       from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
-// import { FormsModule } from '@angular/forms';
+import { NgModule, NgModuleFactoryLoader } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/Router';
 
-import { routing }        from './app.routes';
+import { routing } from './app.routes';
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
-import { SharedModule }  from './shared/shared.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent
+    ],
     imports: [
         BrowserModule,
         routing,
-        // FormsModule,
+        FormsModule,
         HttpModule,
         // Only module that app module loads
         SharedModule.forRoot()
@@ -24,4 +26,7 @@ import { SharedModule }  from './shared/shared.module';
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    /* Initialize singleton of App Service */
+    constructor(appService: AppService) { }
+}

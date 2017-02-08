@@ -1,0 +1,78 @@
+.date-time {
+    display: flex;
+    width: 100%;
+    // Get rid of dropdown arrow
+    #datetimeDropdown {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 0;
+    }
+    .show>.dropdown-menu {
+        display: inline-block;
+    }
+    .dropdown-toggle:after {
+        display: none;
+    }
+    .dropdown-menu {
+        left: -430%;
+        padding: 1em;
+        min-width: auto;
+        width: auto;
+        .dropdown-container {
+            .date-picker {
+                max-height: 240px;
+                .ngb-datepicker {
+                    border: none;
+                }
+                // Style for custom day on datepicker
+                .custom-day {
+                    text-align: center;
+                    padding: 0.185rem 0.25rem;
+                    border-radius: 0.25rem;
+                    display: inline-block;
+                    width: 2rem;
+                    &.bg-primary {
+                        color: white;
+                    }
+                }
+                .custom-day:hover {
+                    background-color: #e6e6e6;
+                }
+                .weekend {
+                    background-color: #ff8000;
+                    border-radius: 1rem;
+                    color: white;
+                }
+                .hidden {
+                    display: none;
+                }
+            }
+            .time-picker {
+                max-height: 0;
+                .col {
+                    padding: 2em;
+                }
+            }
+            &.active {
+                .date-picker {
+                    max-height: 0px;
+                }
+                .time-picker {
+                    max-height: 210px;
+                }
+            }
+        }
+        .sect {
+            max-height: 0;
+            overflow: hidden;
+            &.date-picker {
+                transition: max-height 0.4s ease;
+                height: auto;
+            }
+            &.time-picker {
+                transition: max-height 0.4s ease;
+                height: auto;
+            }
+        }
+    }
+}

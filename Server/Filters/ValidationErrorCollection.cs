@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NgDotNetCore.Server.Filters
+namespace FSM.WebClient.Server.Filters
 {
     /// <summary>
     /// A collection of ValidationError objects that is used to collect

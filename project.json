@@ -84,7 +84,7 @@
   },
   "buildOptions": {
     "emitEntryPoint": true,
-    "outputName": "NgDotNetCore",
+    "outputName": "FSM.WebClient",
     "preserveCompilationContext": true,
     "compile": {
       "exclude": [
@@ -118,6 +118,6 @@
     ]
   },
   "tooling": {
-    "defaultNamespace": "NgDotNetCore"
+    "defaultNamespace": "FSM.WebClient"
   }
 }

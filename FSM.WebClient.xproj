@@ -8,7 +8,7 @@
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>24b3dac3-4bcf-487b-ae2e-71714cb81bfa</ProjectGuid>
-    <RootNamespace>NgDotNetCore</RootNamespace>
+    <RootNamespace>FSM.WebClient</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
