@@ -47,7 +47,7 @@
 .st-container {
 	overflow: hidden;
 	position: fixed;
-	left: 3.75em;
+	left: -22.5em;
 	top: 3.75em;
 	width: 18.75em;
     z-index: 20;
@@ -72,6 +72,8 @@
 }
 .st-container.st-menu-open {
 	display: block;
+	width: 100%;
+	left: 3.75em;
 }
 .st-menu {
 	position: absolute;

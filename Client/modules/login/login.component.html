@@ -1,14 +1,16 @@
-﻿<div class="col-md-6 offset-md-3">
-    <div class="card">
-        <div class="card-header">
-            Login
-        </div>
+﻿<div class="container app-content">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Login
+                </div>
 
-        <div class="card-block">
-            <error-summary [errors]="errors"></error-summary>
-            <dynamic-form (formsubmit)="login($event)" [controls]="controls" [btnText]="'Login'"></dynamic-form>
+                <div class="card-block">
+                    <error-summary [errors]="errors"></error-summary>
+                    <dynamic-form (formsubmit)="login($event)" [controls]="controls" [btnText]="'Login'"></dynamic-form>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </div>

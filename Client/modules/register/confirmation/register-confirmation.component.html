@@ -1,12 +1,9 @@
-﻿<div>
-    <appc-page-heading text="Registration confirmed">
-    </appc-page-heading>
-
+﻿<div class="container app-content">
+    <h4>Registration confirmed></h4>
     <p *ngIf="!emailConfirmed">
         We have sent you a confirmation email, please visit your inbox and confirm by clicking the confirmation link.
     </p>
-
     <p *ngIf="emailConfirmed">
         Thank you for confirming your email, please <a routerLink="../../login">Login</a> now.
     </p>
-</div>#
+</div>

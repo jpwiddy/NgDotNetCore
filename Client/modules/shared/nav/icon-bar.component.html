@@ -1,0 +1,9 @@
+<div class="icon-menu">
+    <ul>
+        <li *ngFor="let page of sideBarPages" 
+            (click)="selectPage(page)"
+            [class]="page.icon" [ngbTooltip]="page.title" 
+            placement="right">
+        </li>
+    </ul>
+</div>

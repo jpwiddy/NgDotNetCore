@@ -20,4 +20,6 @@
         "Client/**/*.js": true,
         "Client/**/*.js.map": true
     }
+,
+"typescript.tsdk": "./node_modules/typescript/lib"
 }
